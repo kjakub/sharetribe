@@ -211,3 +211,8 @@ end
 Then(/^I should see that the listing does not have "(.*?)"$/) do |option_title|
   find(".checkbox-option.not-selected", :text => option_title)
 end
+
+When(/^I (?:buy) that listing$/) do
+  visit(path_to "the listing page")
+  find(".book-button").click
+end
